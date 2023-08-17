@@ -1,10 +1,7 @@
 name: 'CodeQL Trigger'
 on:
   push:
-  pull_request:
-    branches:
-      - feature/**
-      - main
+  workflow_dispatch:
         
 
 jobs:               # Sends post request to github api
