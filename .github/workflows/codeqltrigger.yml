@@ -1,0 +1,22 @@
+name: 'CodeQL Trigger'
+on:
+  push:
+  pull_request:
+    branches:
+      - feature/**
+      - main
+        
+
+jobs:               # Sends post request to github api
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send POST Request
+        run: |
+          curl -L \
+            -X POST \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Authorization: Bearer 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" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d '{"event_type": "trigger"' \
+            "https://api.github.com/repos/adam-ateye-newday/CodeQL-Test/dispatches"
