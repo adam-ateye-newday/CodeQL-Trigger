@@ -16,4 +16,4 @@ jobs:               # Sends post request to github api
             -H "Authorization: Bearer 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" \
             -H "Accept: application/vnd.github.v3+json" \
             -d '{"event_type": "trigger"' \
-            "https://api.github.com/repos/adam-ateye-newday/CodeQL-Test/dispatches"
+            "https://api.github.com/adam-ateye-newday/CodeQL-Test/dispatches"
